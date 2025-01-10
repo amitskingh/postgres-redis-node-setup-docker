@@ -21,7 +21,16 @@ DB_NAME=DATABASE   # Replace 'DATABASE' with your PostgreSQL database name
 
 ## **Usage**
 
-1. **Build and Start Containers**  
+1. **Install Dependencies**  
+   Before running the containers, make sure to install the required Node.js dependencies. Run the following command in the root of your Node.js application:  
+
+   ```bash
+   npm install
+   ```
+
+   This will install all the necessary packages listed in your `package.json` file.
+
+2. **Build and Start Containers**  
    Run the following command to build and start the containers:  
 
    ```bash
@@ -33,7 +42,7 @@ DB_NAME=DATABASE   # Replace 'DATABASE' with your PostgreSQL database name
    - Start the containers with the configurations provided in the `docker-compose.yml` file.
    - Initialize the PostgreSQL container with the specified `DB_USER`, `DB_PASSWORD`, and `DB_NAME` provided in the environment variables.
 
-2. **Verify Setup**  
+3. **Verify Setup**  
    Once the containers are running:
    - The Node.js application will be accessible at its configured port.
    - PostgreSQL and Redis will be available for use within the Docker network.
